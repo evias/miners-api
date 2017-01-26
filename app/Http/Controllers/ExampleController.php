@@ -18,17 +18,34 @@
  */
 namespace eMD\Http\Controllers;
 
-class ExampleController extends Controller
+use Illuminate\Container\Container;
+
+class ExampleController
+    extends Controller
 {
+    private $app;
+
     /**
      * Create a new controller instance.
      *
      * @return void
      */
-    public function __construct()
+    public function __construct(Container $app)
     {
-        //
+        $this->app = $app;
     }
 
-    //
+    /**
+     * [helloWorld description]
+     * @return [type] [description]
+     */
+    public function helloWorld()
+    {
+        $html = "Hello, World!" . "<br />"
+              . "Engine: " . $this->app->version() . "<br />"
+              . "Author: Grégory Saive &lt;greg_at_evias.be&gt;" . "<br />"
+        ;
+
+        return $html;
+    }
 }

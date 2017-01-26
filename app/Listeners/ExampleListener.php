@@ -18,7 +18,7 @@
  */
 namespace eMD\Listeners;
 
-use App\Events\ExampleEvent;
+use eMD\Events\ExampleEvent;
 use Illuminate\Queue\InteractsWithQueue;
 use Illuminate\Contracts\Queue\ShouldQueue;
 

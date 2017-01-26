@@ -18,7 +18,7 @@
  */
 namespace eMD\Providers;
 
-use App\User;
+use eMD\User;
 use Illuminate\Support\Facades\Gate;
 use Illuminate\Support\ServiceProvider;
 

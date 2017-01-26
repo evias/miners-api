@@ -40,12 +40,12 @@ $app = new Laravel\Lumen\Application(
 
 $app->singleton(
     Illuminate\Contracts\Debug\ExceptionHandler::class,
-    App\Exceptions\Handler::class
+    eMD\Exceptions\Handler::class
 );
 
 $app->singleton(
     Illuminate\Contracts\Console\Kernel::class,
-    App\Console\Kernel::class
+    eMD\Console\Kernel::class
 );
 
 /*
@@ -60,11 +60,11 @@ $app->singleton(
 */
 
 // $app->middleware([
-//    App\Http\Middleware\ExampleMiddleware::class
+//    eMD\Http\Middleware\ExampleMiddleware::class
 // ]);
 
 // $app->routeMiddleware([
-//     'auth' => App\Http\Middleware\Authenticate::class,
+//     'auth' => eMD\Http\Middleware\Authenticate::class,
 // ]);
 
 /*
@@ -78,13 +78,13 @@ $app->singleton(
 |
 */
 
-// $app->register(App\Providers\AppServiceProvider::class);
-// $app->register(App\Providers\AuthServiceProvider::class);
-// $app->register(App\Providers\EventServiceProvider::class);
+// $app->register(eMD\Providers\eMDServiceProvider::class);
+// $app->register(eMD\Providers\AuthServiceProvider::class);
+// $app->register(eMD\Providers\EventServiceProvider::class);
 
 /*
 |--------------------------------------------------------------------------
-| Load The Application Routes
+| Load The eMDlication Routes
 |--------------------------------------------------------------------------
 |
 | Next we will include the routes file so that they can all be added to
@@ -93,7 +93,7 @@ $app->singleton(
 |
 */
 
-$app->group(['namespace' => 'App\Http\Controllers'], function ($app) {
+$app->group(['namespace' => 'eMD\Http\Controllers'], function ($app) {
     require __DIR__.'/../routes/web.php';
 });
 
